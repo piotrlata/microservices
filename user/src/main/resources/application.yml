@@ -1,0 +1,15 @@
+server:
+  port: 8182
+spring:
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Warsaw&autoReconnect=true&characterEncoding=UTF-8&useUnicode=yes
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+  flyway:
+    baselineOnMigrate: true
+    enabled: false

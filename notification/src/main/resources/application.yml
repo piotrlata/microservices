@@ -1,0 +1,26 @@
+server:
+  port: 8183
+spring:
+  application:
+    name: NOTIFICATION-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/notification?useSSL=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Warsaw&autoReconnect=true&characterEncoding=UTF-8&useUnicode=yes
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+  mail:
+    username: emailtestowy64
+    password: admin12#
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            reqired: true
