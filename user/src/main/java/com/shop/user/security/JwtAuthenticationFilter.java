@@ -1,8 +1,8 @@
 package com.shop.user.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.shop.user.model.dto.LoginDto;
-import com.shop.user.model.dto.SuccessfulLoginDto;
+import com.shop.security.model.dto.LoginDto;
+import com.shop.security.model.dto.SuccessfulLoginDto;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.DefaultClaims;
@@ -37,7 +37,6 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         if (!request.getMethod().equals("POST")) {
             throw new AuthenticationServiceException("http method not supported" + request.getMethod());
         }
-        //dodac w monolicie
         try {
             var loginDto = objectMapper.readValue(request.getInputStream(), LoginDto.class);
             var authenticationToken = new UsernamePasswordAuthenticationToken(loginDto.getEmail(), loginDto.getPassword());

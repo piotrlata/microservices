@@ -1,7 +1,7 @@
 package com.shop.user.mapper;
 
+import com.shop.common.model.dto.UserDto;
 import com.shop.user.model.dao.User;
-import com.shop.user.model.dto.UserDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.data.history.Revision;

@@ -1,9 +1,9 @@
 package com.shop.product.mapper;
 
+import com.shop.common.model.dto.ProductDto;
 import com.shop.product.model.dao.Category;
 import com.shop.product.model.dao.Product;
 import com.shop.product.model.dto.CategoryDto;
-import com.shop.product.model.dto.ProductDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.data.history.Revision;

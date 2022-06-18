@@ -1,11 +1,10 @@
 package com.shop.user.controller;
 
+import com.shop.common.model.dto.UserDto;
 import com.shop.user.mapper.AddressMapper;
 import com.shop.user.mapper.UserMapper;
-import com.shop.user.model.dto.AddressDto;
-import com.shop.user.model.dto.UserDto;
 import com.shop.user.service.UserService;
-import com.shop.user.validator.group.CreateUser;
+import com.shop.common.validator.group.CreateUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -53,6 +52,11 @@ public class UserController {
     @PreAuthorize("hasRole('ADMIN')")
     public Page<UserDto> userPage(@RequestParam int page, @RequestParam int size) {
         return userService.getPage(PageRequest.of(page, size)).map(userMapper::daoToDto);
+    }
+
+    @GetMapping("/current")
+    public UserDto getCurrentUser() {
+        return userMapper.daoToDto(userService.getCurrentUser());
     }
 
     @GetMapping("/confirm")

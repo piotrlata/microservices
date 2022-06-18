@@ -1,7 +1,7 @@
 package com.shop.product.controller;
 
+import com.shop.common.model.dto.ProductDto;
 import com.shop.product.mapper.ProductMapper;
-import com.shop.product.model.dto.ProductDto;
 import com.shop.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

@@ -1,8 +1,8 @@
 package com.shop.user.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.shop.security.JwtAuthorizationFilter;
 import com.shop.user.security.JwtAuthenticationFilter;
-import com.shop.user.security.JwtAuthorizationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -24,8 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf()
-                .ignoringAntMatchers("/**")
-                .and()
+                .disable()
                 .cors()
                 .and()
                 .addFilter(new JwtAuthenticationFilter(authenticationManager(), objectMapper))

@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.shop</groupId>
-	<artifactId>root</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>root</name>
-	<description>Demo project for Spring Boot</description>
-	<packaging>pom</packaging>
-	<properties>
-		<java.version>17</java.version>
-		<spring-cloud.version>2020.0.4</spring-cloud.version>
-	</properties>
-	<modules>
-		<module>common</module>
-		<module>basket</module>
-		<module>discovery</module>
-		<module>gateway</module>
-		<module>notification</module>
-		<module>product</module>
-		<module>user</module>
-	</modules>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.shop</groupId>
+    <artifactId>root</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>root</name>
+    <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>11</java.version>
+        <spring-cloud.version>2020.0.4</spring-cloud.version>
+    </properties>
+    <modules>
+        <module>common</module>
+        <module>basket</module>
+        <module>discovery</module>
+        <module>gateway</module>
+        <module>notification</module>
+        <module>product</module>
+        <module>security</module>
+        <module>user</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.0.2155</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

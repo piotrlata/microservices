@@ -1,5 +1,6 @@
 package com.shop.user.security;
 
+import com.shop.security.SecurityUtils;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;
 

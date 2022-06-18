@@ -1,7 +1,7 @@
 package com.shop.user.controller.history;
 
+import com.shop.common.model.dto.UserDto;
 import com.shop.user.mapper.UserRevisionMapper;
-import com.shop.user.model.dto.UserDto;
 import com.shop.user.repositiory.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

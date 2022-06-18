@@ -8,7 +8,7 @@ import com.shop.user.model.dto.ConfirmRegistrationDto;
 import com.shop.user.repositiory.AddressRepository;
 import com.shop.user.repositiory.RoleRepository;
 import com.shop.user.repositiory.UserRepository;
-import com.shop.user.security.SecurityUtils;
+import com.shop.security.SecurityUtils;
 import com.shop.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

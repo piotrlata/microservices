@@ -1,8 +1,8 @@
 package com.shop.product.controller.history;
 
+import com.shop.common.model.dto.ProductDto;
 import com.shop.product.mapper.RevisionMapper;
 import com.shop.product.model.dto.CategoryDto;
-import com.shop.product.model.dto.ProductDto;
 import com.shop.product.repository.CategoryRepository;
 import com.shop.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;

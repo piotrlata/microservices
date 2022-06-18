@@ -1,5 +1,5 @@
 server:
-  port: 8181
+  port: 8184
 spring:
   application:
     name: BASKET-SERVICE
